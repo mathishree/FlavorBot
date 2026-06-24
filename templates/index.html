@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodSage Recipe Companion</title>
+  <meta name="description" content="FoodSage – Your AI-powered culinary companion. Get instant recipes, ingredient lists, and cooking steps for any dish in English, Tamil, or Telugu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}" />
+</head>
+<body>
+
+  <!-- Animated Background Particles -->
+  <div class="bg-particles" id="bgParticles"></div>
+
+  <!-- Glowing Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Floating Food Emojis -->
+  <div class="floating-foods">
+    <span class="food-float" style="--delay: 0s;   --x: 4%;  --y: 18%">🍕</span>
+    <span class="food-float" style="--delay: 1s;   --x: 91%; --y: 12%">🍜</span>
+    <span class="food-float" style="--delay: 2s;   --x: 6%;  --y: 72%">🍛</span>
+    <span class="food-float" style="--delay: 0.5s; --x: 87%; --y: 68%">🥘</span>
+    <span class="food-float" style="--delay: 1.5s; --x: 3%;  --y: 45%">🍱</span>
+    <span class="food-float" style="--delay: 2.5s; --x: 88%; --y: 40%">🥗</span>
+    <span class="food-float" style="--delay: 3s;   --x: 48%; --y: 4%">🍣</span>
+    <span class="food-float" style="--delay: 0.8s; --x: 50%; --y: 90%">🍲</span>
+  </div>
+
+  <!-- Full-page hero — no navbar, no footer, no scroll -->
+  <main class="hero">
+    <div class="hero-content">
+
+      <!-- Main Title (TOP — no badge above it) -->
+      <h1 class="hero-title">
+        The <span class="highlight">FoodSage</span><br />
+        Recipe <span class="highlight-outline">Companion</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero-subtitle">
+        Your intelligent culinary companion — discover authentic recipes,
+        precise ingredients &amp; step-by-step cooking guidance for
+        <strong>any dish in the world</strong>, in your preferred language.
+      </p>
+
+      <!-- Feature Pills -->
+      <div class="feature-pills">
+        <div class="pill"><span class="pill-icon">🌍</span><span>Global Cuisine</span></div>
+        <div class="pill"><span class="pill-icon">🗣️</span><span>Multilingual</span></div>
+        <div class="pill"><span class="pill-icon">🤖</span><span>AI-Powered</span></div>
+        <div class="pill"><span class="pill-icon">⚡</span><span>Instant Results</span></div>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="card-icon">📋</div>
+          <div class="card-body">
+            <h3>Full Ingredient Lists</h3>
+            <p>Precise quantities for every ingredient</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">👨‍🍳</div>
+          <div class="card-body">
+            <h3>Step-by-Step Guidance</h3>
+            <p>Cooking instructions from prep to plating</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">🌐</div>
+          <div class="card-body">
+            <h3>Tamil &amp; Telugu Support</h3>
+            <p>Get recipes in English, Tamil, or Telugu</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="cta-container">
+        <a href="/chatbot" class="cta-btn" id="foodBotBtn">
+          <span class="btn-glow"></span>
+          <span class="btn-icon">🤖</span>
+          <span class="btn-text">foodBot</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <p class="cta-hint">Click to start your culinary journey</p>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+</body>
+</html>

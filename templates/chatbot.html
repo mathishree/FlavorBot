@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodSage — Recipe Chatbot</title>
+  <meta name="description" content="Chat with FoodSage AI to get instant recipe ingredients and step-by-step cooking instructions in English, Tamil, or Telugu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}" />
+</head>
+<body>
+
+  <!-- Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- Chatbot Wrapper -->
+  <div class="chat-wrapper">
+
+    <!-- Header -->
+    <header class="chat-header">
+      <a href="/" class="back-btn" id="backBtn" title="Back to Home">
+        ← Back
+      </a>
+      <div class="header-center">
+        <div class="bot-avatar">🍽️</div>
+        <div class="header-info">
+          <h1 class="header-title">FoodSage</h1>
+          <span class="header-status">
+            <span class="status-dot"></span>
+            Recipe AI — Online
+          </span>
+        </div>
+      </div>
+      <!-- Language Selector -->
+      <div class="lang-wrapper">
+        <label for="languageSelect" class="lang-label">🌐 Language</label>
+        <div class="select-wrapper">
+          <select id="languageSelect" class="lang-select" title="Select language">
+            <option value="english" selected>🇬🇧 English</option>
+            <option value="tamil">🇮🇳 Tamil</option>
+            <option value="telugu">🇮🇳 Telugu</option>
+          </select>
+          <span class="select-arrow">▾</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Chat Messages Area -->
+    <main class="chat-messages" id="chatMessages">
+
+
+
+    </main>
+
+    <!-- Suggested Queries -->
+    <div class="suggestions-bar" id="suggestionsBar">
+      <span class="suggestions-label">Try:</span>
+      <button class="suggestion-chip" onclick="sendSuggestion('Biryani')">🍛 Biryani</button>
+      <button class="suggestion-chip" onclick="sendSuggestion('Butter Chicken')">🍗 Butter Chicken</button>
+      <button class="suggestion-chip" onclick="sendSuggestion('Dosa')">🫓 Dosa</button>
+      <button class="suggestion-chip" onclick="sendSuggestion('Pasta')">🍝 Pasta</button>
+      <button class="suggestion-chip" onclick="sendSuggestion('Sambar')">🥘 Sambar</button>
+    </div>
+
+    <!-- Input Area -->
+    <footer class="chat-input-area">
+      <div class="input-container">
+        <span class="input-icon">🔍</span>
+        <textarea
+          id="userInput"
+          class="user-input"
+          placeholder="Type any Recipe..."
+          rows="1"
+          maxlength="500"
+        ></textarea>
+        <button id="sendBtn" class="send-btn" title="Send message">
+          <span class="send-icon">➤</span>
+        </button>
+      </div>
+      <p class="input-hint">Press <kbd>Enter</kbd> to send, <kbd>Shift+Enter</kbd> for new line</p>
+    </footer>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html>
